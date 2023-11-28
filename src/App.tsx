@@ -1,15 +1,24 @@
-import backgound from "./assets/background-f.png";
 import FirstPage from "./components/FirstPage";
-import Gear from "./components/Gear";
+import { Routes, Route, useLocation, Outlet } from "react-router-dom";
+import ProjectsPage from "./components/ProjectsPage";
+import ProfilePage from "./components/ProfilePage";
+import ConnectPage from "./components/ConnectPage";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <div className={`relative overflow-hidden text-primary-3`}>
-        <FirstPage />
-        <img src={backgound} className={`absolute top-0 left-0 right-0 h-full w-full`} />
-        <Gear />
-      </div>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/connect" element={<ConnectPage />} />
+      </Routes>
+      <AnimatePresence mode="wait">
+        <Outlet key={location.pathname} />
+      </AnimatePresence>
     </>
   );
 }
