@@ -6,7 +6,7 @@ import Old1 from "../assets/old-1.png";
 import Old2 from "../assets/old-2.png";
 import Old3 from "../assets/old-3.png";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
-import backgound from "../assets/background-f.png";
+import backgound from "../assets/background.png";
 import Gear from "./Gear";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,7 +55,7 @@ function FirstPage() {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={`relative overflow-hidden text-primary-3`}>
       <div className={`relative h-screen bg-primary-1`}>
         <div className={`flex flex-col justify-center items-center w-full h-full ${isStart ? `hidden` : `null`} ${isToggle ? `pt-10 opacity-0 duration-1000` : `null`}`}>
-          <TypeAnimation sequence={["Welcome To My Website", 1000, "Toggle The Button To Start", 10000]} wrapper="span" speed={50} style={{ fontSize: "18px", display: "inline-block" }} repeat={Infinity} />
+          <TypeAnimation sequence={["", 10000, "Welcome To My Website", 1000, "Toggle The Button To Start", 10000]} wrapper="span" speed={50} style={{ fontSize: "18px", display: "inline-block" }} repeat={Infinity} />
           <Toggle />
         </div>
         <div className={`flex flex-col opacity-0 gap-5 justify-center items-center w-full h-full ${isStart ? `pt-0 opacity-100 duration-1000` : `pt-10`}`}>
