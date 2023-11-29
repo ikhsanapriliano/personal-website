@@ -6,7 +6,7 @@ function Gear() {
   const { isToggle } = useAppSelector((state) => state.toggle);
 
   return (
-    <div className={`h-screen absolute top-0 left-0 right-0`}>
+    <div className={`h-screen xs:hidden sm:inline-block absolute top-0 left-0 right-0`}>
       <img className={`absolute w-64 sm:top-[-150px] sm:right-[10px] lg:top-[-95px] lg:right-[45px]`} src={isToggle ? gearSpin : gearStatic} />
       <img className={`absolute w-48 sm:right-[-90px] top-[35px] lg:right-[20px]`} src={isToggle ? gearSpin : gearStatic} />
       <img className={`absolute lg:w-auto sm:top-[-190px] sm:right-[-190px] lg:top-[-170px] lg:right-[-170px] `} src={isToggle ? gearSpin : gearStatic} />
