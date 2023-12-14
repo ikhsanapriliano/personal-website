@@ -4,13 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-1": "#f2e0b0",
-        "primary-2": "#cba075",
-        "primary-3": "#583f37",
-        "secondary-1": "#212529",
-        "secondary-2": "#343a40",
-        "secondary-3": "#495057",
-        "secondary-4": "#e9ecef",
+        "primary-1": "#212529",
+        "primary-2": "#343a40",
+        "primary-3": "#495057",
+        "primary-4": "#e9ecef",
       },
     },
     screens: {

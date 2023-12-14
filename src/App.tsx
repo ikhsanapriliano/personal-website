@@ -1,35 +1,16 @@
-import FirstPage from "./components/FirstPage";
-import { Routes, Route, useLocation, Outlet } from "react-router-dom";
-import ProjectsPage from "./components/ProjectsPage";
-import ProfilePage from "./components/ProfilePage";
-import ConnectPage from "./components/ConnectPage";
-import { AnimatePresence } from "framer-motion";
-import LoadingPage from "./components/LoadingPage";
-import { useEffect, useState } from "react";
+import Footer from "./components/Footer";
+import Profile from "./components/Profile";
+import Projects from "./components/Projects";
 
 function App() {
-  const location = useLocation();
-  const [isLoading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 10000);
-  }, []);
-
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<FirstPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/connect" element={<ConnectPage />} />
-      </Routes>
-      <LoadingPage isLoading={isLoading} />
-      <AnimatePresence mode="wait">
-        <Outlet key={location.pathname} />
-      </AnimatePresence>
-    </>
+    <div className={`flex flex-col justify-center items-center`}>
+      <div className={`lg:w-[800px] xs:py-5 lg:py-0`}>
+        <Profile />
+        <Projects />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
