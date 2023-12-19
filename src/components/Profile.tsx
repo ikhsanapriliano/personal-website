@@ -14,7 +14,7 @@ function Profile() {
         </section>
       </div>
       <div className={`text-primary-4 border-t border-gray-500`}>
-        <p className={`p-10`}>Hello everyone! I am 21 years old Information Systems student located in Bandung. I love coding since I find it fun. These are my areas of expertise.</p>
+        <p className={`p-10`}>Hello everyone! I am 21 years old located in Bandung. I love coding since I find it fun. These are my areas of expertise.</p>
         <div className={`grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 px-5 pb-10 border-b border-gray-500`}>
           <ExpertiseCard skill="MongoDB" />
           <ExpertiseCard skill="ExpressJS" />
